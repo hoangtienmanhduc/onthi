@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width. initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+	rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<title>Edit Experience</title>
+</head>
+<body>
+<div class="container">
+		<h1>Edit Experience</h1>
+		<hr>
+		<br/>
+	<form action="#" th:action="@{/saveExperience}" th:object="${experience}" method="post">
+		<tr>
+			<td>Experience ID: </td>
+			<td th:text="*{id}"></td>
+		</tr>
+		<br>
+		<tr>
+			<td>Company:</td>
+			<td th:text="*{company}"></td>
+		</tr>
+		<br>
+		<tr>
+			<td>From Date:</td>
+			<td th:text="*{fromDate}"></td>
+		</tr>
+		<br>
+		<tr>
+			<td>Role:</td>
+			<td th:text="*{role.name}"></td>
+		</tr>
+		<br>
+		<tr>
+			<td>To Date:</td>
+			<td th:text="*{toDate}"></td>
+		</tr>
+		<br>
+		<tr>
+			<td>Work Desc:</td>
+			<td th:text="*{work_desc}"></td>
+		</tr>
+		<br>
+		<tr>
+			<td>Candidate</td>
+			<td th:text="*{candidate.fullName}"></td>
+		</tr>
+		<br>
+	</form>
+		<hr>
+		<a href="/listexperience" class="btn btn-primary btn-sm mb-3">Back to list Experience</a>
+	</div>
+</body>
+</html>
